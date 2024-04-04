@@ -90,6 +90,7 @@ button[type="submit"]:hover {
     font-size: 32px;
     color: #5b0e7f;
     text-shadow: 45deg #333;
+    font-weight: bold;
 }
 
 .container {
