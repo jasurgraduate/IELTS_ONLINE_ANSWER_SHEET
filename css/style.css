@@ -168,7 +168,12 @@ input[type="text"]::selection {
 
 /* Style for the result text */
 #result {
-    font-size: 2rem;
+    font-size: 1rem;
+    justify-content: center;
+    color: #6f1358;
+    margin-left: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
     /* Increase font size for better visibility */
     /* Add some top margin */
 }
