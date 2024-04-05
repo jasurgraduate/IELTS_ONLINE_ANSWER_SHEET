@@ -42,5 +42,11 @@ document.addEventListener("DOMContentLoaded", function() {
         checkboxes.forEach(checkbox => {
             checkbox.checked = false;
         });
+
+        // Clear all input fields
+        const inputs = document.querySelectorAll('input[type="text"]');
+        inputs.forEach(input => {
+            input.value = "";
+        });
     });
 });
