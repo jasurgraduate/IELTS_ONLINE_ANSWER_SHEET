@@ -1,6 +1,3 @@
-
-
-
 body {
     margin: 0;
     padding: 0;
@@ -15,27 +12,15 @@ header {
     align-items: center;
     position: fixed;
     top: 0;
-    /* Position the header at the top of the viewport */
     left: 0;
-    /* Position the header at the left of the viewport */
     width: 100%;
     margin-bottom: -5rem;
     margin-top: 0rem;
-    /* Make the header span the entire width of the viewport */
-
-    /* Adjust padding as needed */
     z-index: 1;
     background: linear-gradient(15deg, #f2a7a7, #77b4f6);
     border-radius: 0.7rem;
+    height: 11vh;
 }
-
-header p {
-
-    margin-top: 4rem;
-    /* Remove default margin */
-}
-
-/* Button style */
 
 button {
     padding: 8px 15px;
@@ -47,19 +32,14 @@ button {
     transition: ease-in-out;
 }
 
-
-
-/* Button hover effect */
 button:hover {
     display: flex;
     background-color: #3c5899;
     color: rgb(255, 255, 255);
     transition: ease-out;
-    /* Darker green on hover */
 }
 
 button[type="submit"] {
-
     padding: 8px 15px;
     margin: 0.1rem;
     font-size: 14px;
@@ -74,25 +54,14 @@ button[type="submit"]:hover {
     background-color: #3c5899;
     color: rgb(255, 255, 255);
     transition: ease-out;
-    /* Darker green on hover */
 }
 
 #result {
     text-align: center;
     margin-top: 1rem;
-}
-
-#timer {
-    display: block;
-    text-align: left;
-    text-shadow: #333;
-    margin-top: 1rem;
-    margin-right: 2rem;
-    margin-bottom: 1rem;
-    border: #ffffff;
-    font-size: 32px;
-    color: #5b0e7f;
-    text-shadow: 45deg #333;
+    font-size: 1rem;
+    color: #6f1358;
+    text-transform: uppercase;
     font-weight: bold;
 }
 
@@ -107,25 +76,26 @@ button[type="submit"]:hover {
 a {
     text-decoration: none;
     cursor: pointer;
+    padding: 7px 0px 5px;
 }
+
+a:hover {
+    background: linear-gradient(135deg, #fcd86d, #2bffff, 0.7); /* Stylish gradient colors */
+    color: #ff6363; /* Text color on hover */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow for depth */
+}
+
 
 h1 {
     text-align: center;
 }
 
-
-
-
 li {
     margin-bottom: 1rem;
     position: relative;
     display: inline-flex;
-    /* Align items in a row */
     align-items: center;
-    /* Vertically center items */
 }
-
-p {}
 
 label {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -140,19 +110,11 @@ input[type="text"] {
     margin-left: 0.5rem;
 }
 
-input[type="text"]::selection {
-    border-color: blue;
-    /* Change to the desired color */
-}
-
 .checkbox-label {
     margin-left: 1rem;
-    /* Adjusted margin */
 }
 
-/* Additional styles for footer */
 .footer {
-    
     bottom: 0;
     width: 100%;
     height: 90%;
@@ -162,30 +124,13 @@ input[type="text"]::selection {
     font-size: 24px;
     padding: 00px 00px;
     display: flex;
-    /* Add this line */
     justify-content: center;
     align-items: center;
-    /* Add this line for vertical centering */
     border: 10px #333;
     margin-bottom: 0rem;
     margin-top: 0rem;
     border-radius: 0.5rem;
 }
-
-/* Style for the result text */
-#result {
-    font-size: 1rem;
-    justify-content: center;
-    color: #6f1358;
-    margin-left: 2rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    /* Increase font size for better visibility */
-    /* Add some top margin */
-}
-
-
-
 
 .column {
     margin-top: 2rem;
@@ -197,35 +142,38 @@ input[type="text"]::selection {
     justify-content: center;
 }
 
-
 .inputForm {
     padding: 0rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
-
 }
 
 .checkbox-label {
     display: inline-block;
     border: #2bdfff;
     margin-left: 0.5rem;
-    margin-right: -0.5rem;
+    cursor: pointer;
 }
 
+.checkbox-label:hover {
+    background: linear-gradient(135deg, #ff416c, #2bffff, 0.7); /* Stylish gradient colors */
+    color: #ff6363; /* Text color on hover */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow for depth */
+    padding: 0.3rem;
+    padding-right: 1.4rem;
+}
 .checkbox-label input[type="checkbox"] {
     margin-right: 0px;
-    /* Adjust the spacing between checkbox and text */
 }
 
 .checkbox-label input[type="checkbox"]+span {
     display: inline-block;
-
 }
 
 .checkbox-label label:hover {
     background-color: #f88383;
-    /* Change background color on hover */
     border-color: aqua;
+    cursor: pointer;
 }
 
 #homeBtn {
@@ -242,20 +190,17 @@ input[type="text"]::selection {
     background: linear-gradient(300deg, #f2a7a7, #77f6df);
 }
 
-
-
-/* Button hover effect */
 #homeBtn:hover {
     display: block;
-    padding: 0.5rem 1rem;
     background-color: #3c5899;
     color: rgb(255, 255, 255);
     transition: ease-out;
-    /* Darker green on hover */
     background-color: rgba(60, 88, 153, 0.7);
 }
 
-
-/*  ---------------------------------------------------- TEST */
-
-
+#timer {
+    font-size: 2rem;
+    margin-right: 2rem;
+    font-weight: bold;
+    color: #6f1358;
+}
