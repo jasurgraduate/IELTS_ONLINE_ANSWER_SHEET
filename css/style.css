@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background: linear-gradient(to bottom right, #f8e7ce, #e8dac7);
     justify-content: center;
 }
@@ -37,6 +37,7 @@ button:hover {
     background-color: #3c5899;
     color: rgb(255, 255, 255);
     transition: ease-out;
+    box-shadow: 0px 0px 10px rgba(35, 35, 35, 0.3);
 }
 
 button[type="submit"] {
@@ -191,11 +192,10 @@ input[type="text"] {
 }
 
 #homeBtn:hover {
-    display: block;
-    background-color: #3c5899;
-    color: rgb(255, 255, 255);
-    transition: ease-out;
-    background-color: rgba(60, 88, 153, 0.7);
+    background: linear-gradient(135deg, #ff416c, #2bffff, 0.7); /* Stylish gradient colors */
+    color: #ff00ea; /* Text color on hover */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow for depth */
+    
 }
 
 #timer {
