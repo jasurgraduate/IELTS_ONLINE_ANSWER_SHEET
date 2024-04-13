@@ -161,7 +161,7 @@ input[type="text"] {
     color: #ff6363; /* Text color on hover */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow for depth */
     padding: 0.3rem;
-    padding-right: 1.4rem;
+    padding-right: 0.5rem;
 }
 .checkbox-label input[type="checkbox"] {
     margin-right: 0px;
