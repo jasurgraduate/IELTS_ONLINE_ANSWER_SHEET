@@ -204,3 +204,30 @@ input[type="text"] {
     font-weight: bold;
     color: #6f1358;
 }
+
+/* || SMALL SCREEN ---------------------------------------------------MOBILE*/
+@media screen and (min-width: 76px) {
+    .column {
+        margin-top: 2rem;
+        column-count: 1;
+        column-rule: 1px solid #333;
+        display: block;
+        break-inside: avoid;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .column {
+        margin-top: 2rem;
+        column-count: 4;
+        column-rule: 1px solid #333;
+        display: block;
+        break-inside: avoid;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
