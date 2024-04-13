@@ -50,3 +50,26 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const inputs = document.querySelectorAll("input[type='text']");
+
+    inputs.forEach((input, index) => {
+        input.addEventListener("keydown", function(event) {
+            if (event.key === "Enter" && !event.shiftKey) {
+                event.preventDefault(); // Prevent default behavior of Enter key
+                const nextIndex = index + 1;
+                if (nextIndex < inputs.length) {
+                    inputs[nextIndex].focus(); // Move focus to the next input
+                }
+            } else if (event.key === "Enter" && event.shiftKey) {
+                event.preventDefault(); // Prevent default behavior of Shift + Enter
+                const prevIndex = index - 1;
+                if (prevIndex >= 0) {
+                    inputs[prevIndex].focus(); // Move focus to the previous input
+                    inputs[prevIndex].select(); // Select all text in the previous input
+                }
+            }
+        });
+    });
+});
