@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const submitButton = document.querySelector('button[type="submit"]');
+    const resetButton = document.getElementById('resetBtn');
     const resultDiv = document.getElementById('result');
 
     // Function to calculate the number of correct answers and update the result
@@ -15,22 +16,30 @@ document.addEventListener("DOMContentLoaded", function() {
         resultDiv.textContent = `Correct Answers: ${correctCount}`;
 
         // Check if the number of correct answers is more than 35
-        if (correctCount > 35) {
+        if (correctCount > 34) {
             // If true, display congratulations message
             resultDiv.textContent += ". Congratulations! You made it!";
-        } else if (correctCount > 30 && correctCount <= 35) {
+            // Trigger confetti with snowfall effect
+            confetti({
+                particleCount: 3500, // Number of particles
+                spread: window.innerWidth, // Spread angle of the particles (matches screen width)
+                angle: 135,  // Angle in degrees at which particles are launched (towards top)
+                startVelocity: 90, // Initial speed of the particles
+                colors: ['#FF0000', '#00FF00', '#0000FF'], // Different colors of the particles
+                shapes: ['square', 'circle'], // Shapes of the particles
+                origin: { y: 1 } // Starting point (y: 1 is at the bottom of the screen)
+            });
+        } else if (correctCount > 30 && correctCount <= 34) {
             // If true, display close message
             resultDiv.textContent += ". That was close! Keep it up!";
         }
     }
 
-    // Add click event listener to the submit button
-    submitButton.addEventListener("click", function() {
-        // Update the result when the submit button is clicked
+    // Attach the updateResult function to the submit button's click event
+    submitButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent form submission
         updateResult();
     });
-
-    const resetButton = document.getElementById('resetBtn');
 
     // Add click event listener to the reset button
     resetButton.addEventListener("click", function() {
@@ -49,11 +58,9 @@ document.addEventListener("DOMContentLoaded", function() {
             input.value = "";
         });
     });
-});
 
-document.addEventListener("DOMContentLoaded", function() {
+    // Handle enter key navigation for text inputs
     const inputs = document.querySelectorAll("input[type='text']");
-
     inputs.forEach((input, index) => {
         input.addEventListener("keydown", function(event) {
             if (event.key === "Enter" && !event.shiftKey) {
